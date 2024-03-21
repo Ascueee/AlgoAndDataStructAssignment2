@@ -1,10 +1,15 @@
-
-idArray = [11,1,30,2,51,6,29,7,67,15,118,4,89,23]
+import winsound
+import os;
 inSelection = True
 
 #method to print out the whole array in a styalized in the console
 def PrintArray(arr):
     print("Array to be sorted: ", arr)  
+
+#Plays sound in console(if windows sound is playing open up the folder in the IDE)
+def PlaySortSound():
+    #uses winSound library to play sound
+    winsound.PlaySound('SortSound.wav', winsound.SND_FILENAME)
 
 def MergeSort(arrToSort):
 
@@ -19,6 +24,8 @@ def MergeSort(arrToSort):
         print("Array Being Split is: ", arrToSort)
         print("Left Data Split: ", leftData, " Right Data Split: ", rightData)
         print(" ")
+        #plays sound for audio cue that the algorithim is sorting
+        PlaySortSound()
 
         MergeSort(leftData)
         MergeSort(rightData)
