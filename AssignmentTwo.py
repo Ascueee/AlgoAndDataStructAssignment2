@@ -58,7 +58,7 @@ arraySize = int(arraySize)
 userArray = [0] * arraySize
 print("This is the new array before values inputted: ", userArray)
 for x in range(arraySize):
-    print("Please input a int value to be sorted")
+    print("Please input one of ", arraySize," integer values to the array")
     arrayVal = input()
     arrayVal = int(arrayVal)
     userArray[x] = arrayVal
